@@ -1,0 +1,38 @@
+SELECT * FROM BIT_DB.Spotifydata;
+
+SELECT count(artist_name)
+FROM BIT_DB.Spotifydata;
+
+
+SELECT avg(song_key), avg(loudness),artist_name
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name;
+
+SELECT track_name, artist_name, MAX(song_key)
+FROM BIT_DB.Spotifydata
+ORDER BY song_key desc
+LIMIT 1;
+
+SELECT track_name, artist_name
+FROM BIT_DB.Spotifydata
+WHERE artist_name like '%A';
+
+SELECT avg(popularity), avg(danceability)
+FROM BIT_DB.Spotifydata;
+
+
+SELECT avg(popularity*danceability) as Popular_Danceability_Combined
+FROM BIT_DB.Spotifydata;
+
+
+SELECT duration_ms, artist_name, track_name
+FROM BIT_DB.Spotifydata
+ORDER BY duration_ms ASC;
+
+SELECT artist_name, track_name
+FROM BIT_DB.Spotifydata
+ORDER BY artist_name DESC;
+
+SELECT distinct artist_name, track_name
+FROM BIT_DB.Spotifydata
+WHERE artist_name like 'A%';
