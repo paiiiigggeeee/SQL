@@ -1,0 +1,17 @@
+CREATE TABLE movies (
+	id INTEGER PRIMARY KEY,
+	title TEXT,
+	released INTEGER
+);
+
+INSERT INTO movies VALUES (1, "Tenet", 2020);
+INSERT INTO movies VALUES (2, "Wonder Woman 1984", 2020);
+INSERT INTO movies VALUES (3, "Soul", 2020);
+INSERT INTO movies VALUES (4, "The Midnight Sky", 2020);
+INSERT INTO movies VALUES (5, "Godzilla vs. Kong", 2021);
+INSERT INTO movies VALUES (6, "A Quiet Place Part II", 2021);
+
+SELECT *
+FROM movies
+WHERE released>2020
+ORDER BY released desc;
