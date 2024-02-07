@@ -1,0 +1,6 @@
+USE PETSHOP
+
+SELECT * 
+
+FROM Pets
+ORDER BY PetVariety ASC;
